@@ -375,7 +375,7 @@ function Contact() {
             <span className="eyebrow">PLAN YOUR VISIT</span>
             <h2>We are ready to <em>connect.</em></h2>
             <p>Have a prayer request, question, or testimony? Send us a message.</p>
-            <p className="address"><MapPin /> Your Church Address<br />Philippines</p>
+            <p className="address"><MapPin /> 464 Ojen Building New Zaniga Mandaluyong City<br />Philippines</p>
           </div>
 
           <form className="contact-form" onSubmit={submit}>
