@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "./image/logo.png";
 import {
   ArrowRight,
   BookOpen,
@@ -13,9 +14,9 @@ import {
 import { Link, Route, Routes } from "react-router-dom";
 
 const sermons = [
-  ["Walking by Faith", "2 Corinthians 5:7", "Victory Church"],
-  ["Faith That Moves Forward", "Hebrews 11:1", "Victory Church"],
-  ["Serve With Purpose", "1 Corinthians 15:58", "Victory Church"],
+  ["Keeping Our Focus", "Hebrews 11:27", "VCICM"],
+  ["Keeping our Focus on God's Provision", "Proverbs 3:9", "VCICM"],
+  ["The Powerful Secret of Spiritual Growth", "John 15:1-7", "VCICM"]
 ];
 
 const ministries = [
@@ -44,10 +45,11 @@ function Header() {
     <header className="header">
       <div className="wrap nav">
         <Link className="brand" to="/" onClick={() => setOpen(false)}>
-          <span className="brand-mark">✝</span>
+          <img src={logo} alt="Victory Church Logo" className="brand-mark" />
           <span>
             <strong>VICTORY CHURCH</strong>
             <small>International Christian Ministry</small>
+            {/* <small>Mandaluyong Chapter</small> */}
           </span>
         </Link>
 
@@ -61,9 +63,9 @@ function Header() {
               {label}
             </Link>
           ))}
-          <Link className="admin-link" to="/admin" onClick={() => setOpen(false)}>
+          {/* <Link className="admin-link" to="/admin" onClick={() => setOpen(false)}>
             Admin
-          </Link>
+          </Link> */}
         </nav>
       </div>
     </header>
@@ -76,7 +78,7 @@ function Footer() {
       <div className="wrap footer-grid">
         <div>
           <div className="brand footer-brand">
-            <span className="brand-mark">✝</span>
+            <img src={logo} alt="Victory Church Logo" className="brand-mark" />
             <span>
               <strong>VICTORY CHURCH</strong>
               <small>International Christian Ministry</small>
@@ -125,7 +127,7 @@ function Hero() {
       <div className="hero-overlay" />
       <div className="wrap hero-content">
         <span className="eyebrow">WELCOME HOME</span>
-        <h1>Faith. Hope.<br /><em>Victory.</em></h1>
+        <h1>WIN. BUILD.<br /><em>SEND.</em></h1>
         <p>
           A Christ-centered community where people discover God's Word,
           grow in faith, and serve with purpose.
@@ -175,9 +177,8 @@ function Home() {
         </div>
         <div>
           <p>
-            Victory Church International Christian Ministry exists to glorify
-            God, proclaim the Gospel of Jesus Christ, disciple believers, and
-            reach our community with His love.
+            A Full Gospel centered community committed to making disciples. 
+            We believe that the message of Jesus is transformative, and we aim to create an environment where people can grow spiritually.
           </p>
           <Link className="text-link" to="/about">Learn more <ArrowRight /></Link>
         </div>
@@ -200,8 +201,8 @@ function Home() {
       <section className="verse">
         <div className="wrap">
           <span className="verse-cross">✝</span>
-          <blockquote>“For we walk by faith, not by sight.”</blockquote>
-          <p>2 Corinthians 5:7</p>
+          <blockquote>“But thanks be to God, which giveth us the victory through our Lord Jesus Christ.”</blockquote>
+          <p>1 Corinthians 15:57</p>
         </div>
       </section>
 
@@ -211,7 +212,7 @@ function Home() {
           <CalendarDays />
           <div>
             <strong>Sunday Worship Service</strong>
-            <p>Every Sunday · 9:00 AM – 11:00 AM</p>
+            <p>Every Sunday · 10:00 AM – 12:00 AM</p>
           </div>
           <Link to="/events">View schedule <ArrowRight /></Link>
         </div>
@@ -241,21 +242,26 @@ function About() {
             <span className="eyebrow">OUR PURPOSE</span>
             <h2>Our <em>Mission</em></h2>
             <p>
-              To reach people with the Gospel, disciple believers, and build
-              a Christ-centered community that serves God and others.
+              TO EVANGELIZE PEOPLE AND BRING THEM INTO THE KNOWLEDGE OF REPENTANCE THAT WILL LEAD THEM TO ACCEPTING JESUS CHRIST AS THEIR PERSONAL LORD AND SAVIOR.
+            </p>
+            <p>
+             TEACHING THEM TO SERVE GOD WHOLEHEARTEDLY AND EXPERIENCE GOD'S POWER AND HEALING UPON THEIR LIVES THAT THEY MAY LIVE VICTORIOUS IN THIS DYING WORLD.
+            </p>
+            <p>
+             EQUIPPING THEM TO BE DEEPLY FOUNDED IN GOD'S WORDS TO BE FIRM IN RIGHTEOUSNESS IN TRIUMPH OVER TROUBLES AND STRUGGLES THEY MAY FACE IN LIVING THEIR CHRISTIAN LIFE.
+            </p>
+            <p>
+              VCICM FIRMLY BELIEVES THAT THE ONLY WAY TO SATISFY LIFE IS THROUGH JESUS CHRIST AND THE ONLY METHOD IS THE WORD OF GOD.
             </p>
             <h2>Our <em>Vision</em></h2>
             <p>
-              A growing family of believers transformed by God's Word and
-              equipped to make disciples.
+              WIN - BUILD - SEND.
             </p>
           </div>
           <div className="feature-box">
-            <span>✝</span>
-            <h3>Every life has purpose.</h3>
+            <span>7 DRIVERS</span>
             <p>
-              We believe every believer has a place to worship, grow, serve,
-              and share Christ.
+              PRAYER  | EVANGELISM | DISCIPLESHIP | TITHES AND OFFERING | PRAISE AND WORSHIP | CHURCH COMMITMENT | CHURCH PLANTING
             </p>
           </div>
         </div>
@@ -304,9 +310,10 @@ function Sermons() {
 
 function Events() {
   const events = [
-    ["SUNDAY", "Sunday Worship Service", "9:00 AM – 11:00 AM"],
+    ["SUNDAY", "Sunday Worship Service", "10:00 AM – 12:00 AM"],
     ["WEDNESDAY", "Midweek Bible Study", "7:00 PM – 8:30 PM"],
-    ["FRIDAY", "Prayer Meeting", "7:00 PM – 8:00 PM"],
+    ["SATURDAY", "Music Service", "3:00 PM – 6:30 PM"],
+    ["IMPORTANT", "PRAYING AND FASTING EVERY LAST SATURDAY OF THE MONTH", "10:00 AM – ONWARDS"],
   ];
 
   return (
