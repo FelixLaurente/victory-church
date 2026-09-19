@@ -2,6 +2,12 @@ import { useState } from "react";
 import logo from "./image/logo.png";
 import { Calendar } from "lucide-react";
 import {
+  FaFacebook,
+  FaYoutube,
+  FaInstagram,
+} from "react-icons/fa";
+
+import {
   ArrowRight,
   DollarSign,
   Music,
@@ -92,11 +98,11 @@ function Footer() {
         </div>
         <div>
           <h4>Connect</h4>
-          {/* <div className="socials">
-            <a href="#" aria-label="Facebook"><Facebook /></a>
-            <a href="#" aria-label="YouTube"><Youtube /></a>
-            <a href="#" aria-label="Instagram"><Instagram /></a>
-          </div> */}
+          <div className="socials">
+            <a href="https://www.facebook.com/VictoryChurchph" aria-label="Facebook"><FaFacebook /></a>
+            <a href="#" aria-label="YouTube"><FaYoutube /></a>
+            <a href="https://www.instagram.com/vcicm_ph" aria-label="Instagram"><FaInstagram /></a>
+          </div>
         </div>
       </div>
       <div className="copyright">
