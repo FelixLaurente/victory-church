@@ -212,7 +212,7 @@ function Home() {
           <CalendarDays />
           <div>
             <strong>Sunday Worship Service</strong>
-            <p>Every Sunday · 10:00 AM – 12:00 AM</p>
+            <p>Every Sunday · 10:00 AM – 12:00 NN</p>
           </div>
           <Link to="/events">View schedule <ArrowRight /></Link>
         </div>
@@ -310,7 +310,7 @@ function Sermons() {
 
 function Events() {
   const events = [
-    ["SUNDAY", "Sunday Worship Service", "10:00 AM – 12:00 AM"],
+    ["SUNDAY", "Sunday Worship Service", "10:00 AM – 12:00 NN"],
     ["WEDNESDAY", "Midweek Bible Study", "7:00 PM – 8:30 PM"],
     ["SATURDAY", "Music Service", "3:00 PM – 6:30 PM"],
     ["IMPORTANT", "PRAYING AND FASTING EVERY LAST SATURDAY OF THE MONTH", "10:00 AM – ONWARDS"],
