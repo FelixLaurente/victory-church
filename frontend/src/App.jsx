@@ -383,7 +383,7 @@ function Contact() {
             <input required type="email" placeholder="Email Address" />
             <textarea required rows="6" placeholder="Your Message" />
             <button className="btn gold" type="submit">Send Message <ArrowRight /></button>
-            {sent && <p className="success">Thank you! Your message was submitted. Connect this form to the backend API for production.</p>}
+            {sent && <p className="success">Thank you! Your message was submitted.</p>}
           </form>
         </div>
       </main>
