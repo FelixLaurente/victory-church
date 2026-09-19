@@ -1,9 +1,13 @@
 import { useState } from "react";
 import logo from "./image/logo.png";
+import { Calendar } from "lucide-react";
 import {
   ArrowRight,
+  DollarSign,
+  Music,
+  ChurchIcon,
+  PlantPot,
   BookOpen,
-  CalendarDays,
   Heart,
   MapPin,
   Menu,
@@ -186,14 +190,17 @@ function Home() {
 
       <section className="cream-section">
         <div className="wrap">
-          <SectionHeading eyebrow="GET INVOLVED" title={<>Ways to <em>Grow</em></>}>
+          <SectionHeading eyebrow="GET INVOLVED" title={<> SEVEN <em>DRIVERS</em></>}>
             Discover opportunities to grow in faith, serve others, and make a difference.
           </SectionHeading>
           <div className="grid-4">
-            <Card icon={<BookOpen />} title="Bible Study" text="Go deeper into God's Word and strengthen your faith." />
-            <Card icon={<Heart />} title="Prayer Ministry" text="Seek God's presence together through prayer and intercession." />
-            <Card icon={<Users />} title="Community" text="Build Christ-centered relationships and encourage one another." />
-            <Card icon={<ArrowRight />} title="Outreach" text="Share the Gospel and serve people with practical love." />
+            <Card icon={<BookOpen />} title="PRAYER" text="Go deeper into God's Word and strengthen your faith." />
+            <Card icon={<Heart />} title="EVANGELISM" text="Seek God's presence together through prayer and intercession." />
+            <Card icon={<Users />} title="DISCIPLESHIP" text="Build Christ-centered relationships and encourage one another." />
+            <Card icon={<DollarSign />} title="TITHES AND OFFERING" text="Share the Gospel and serve people with practical love." />
+            <Card icon={<Music />} title="PRAISE AND WORSHIP" text="Share the Gospel and serve people with practical love." />
+            <Card icon={<ChurchIcon />} title="CHURCH COMMITMENT" text="Share the Gospel and serve people with practical love." />
+            <Card icon={<PlantPot />} title="CHURCH PLANTING" text="Share the Gospel and serve people with practical love." />
           </div>
         </div>
       </section>
@@ -209,14 +216,26 @@ function Home() {
       <section className="wrap upcoming">
         <SectionHeading eyebrow="JOIN US" title={<>Upcoming <em>Services</em></>} />
         <div className="event-row">
-          <CalendarDays />
+          <Calendar />
           <div>
-            <strong>Sunday Worship Service</strong>
-            <p>Every Sunday · 10:00 AM – 12:00 NN</p>
+            <strong>THANKS GIVING CELEBRATION</strong>
+            <p>December · 10:00 AM - ONWARDS</p>
           </div>
-          <Link to="/events">View schedule <ArrowRight /></Link>
+    
         </div>
+
+         <div className="event-row">
+          <Calendar />
+          <div>
+            <strong>NATIONAL CONFERENCE</strong>
+            <p>February · 10:00 AM – 7:00 PM</p>
+          </div>
+        <Link to="/events">View schedule <ArrowRight /></Link>
+        </div>
+             
       </section>
+
+      
     </>
   );
 }
@@ -310,10 +329,15 @@ function Sermons() {
 
 function Events() {
   const events = [
-    ["SUNDAY", "Sunday Worship Service", "10:00 AM – 12:00 NN"],
-    ["WEDNESDAY", "Midweek Bible Study", "7:00 PM – 8:30 PM"],
-    ["SATURDAY", "Music Service", "3:00 PM – 6:30 PM"],
-    ["IMPORTANT", "PRAYING AND FASTING EVERY LAST SATURDAY OF THE MONTH", "10:00 AM – ONWARDS"],
+    ["DECEMBER", "THANKS GIVING CELEBRATION", "10:00 AM – 7:00 PM"],
+    ["FEBRUARY", "NATIONAL CONFERENCE", "10:00 AM – 7:00 PM"],
+    ["", "NUEVA ECIJA", "TO BE ANNOUNCED"],
+    ["", "BORACAY", "TO BE ANNOUNCED"],
+    ["", "PAGBILAO", "TO BE ANNOUNCED"],
+    ["", "PALAWAN", "TO BE ANNOUNCED"],
+    ["", "EL NIDO", "TO BE ANNOUNCED"],
+    ["", "PANGASINAN", "TO BE ANNOUNCED"],
+    
   ];
 
   return (
@@ -321,11 +345,11 @@ function Events() {
       <PageHero eyebrow="CALENDAR" title="Events & Services" />
       <main className="wrap page-content">
         <div className="event-list">
-          {events.map(([day, title, time]) => (
+          {events.map(([month, title, time]) => (
             <article className="event-card" key={title}>
-              <CalendarDays />
+              <Calendar />
               <div>
-                <span>{day}</span>
+                <span>{month}</span>
                 <h3>{title}</h3>
                 <p>{time}</p>
               </div>
@@ -373,9 +397,14 @@ function Contact() {
         <div className="two-column contact">
           <div>
             <span className="eyebrow">PLAN YOUR VISIT</span>
-            <h2>We are ready to <em>connect.</em></h2>
+            <h1>MASTER TOUCH CONFERENCE <em>CENTER.</em></h1>
+             <p className="address"><MapPin /> Unit 7 Sto. Niño 1 Outpost, Cabal St. Brgy. Mayamot Antipolo City<br />Philippines</p>
+             <h3>MAIN <em>CHURCH.</em></h3>
+             <p className="address"><MapPin /> 4th Flr Asian Pacific Bldg Harvard Street, Cubao , QC<br />Philippines</p>
+
+            <h3>We are ready to <em>connect.</em></h3>
             <p>Have a prayer request, question, or testimony? Send us a message.</p>
-            <p className="address"><MapPin /> 464 Ojen Building New Zaniga Mandaluyong City<br />Philippines</p>
+           
           </div>
 
           <form className="contact-form" onSubmit={submit}>
